@@ -1,6 +1,6 @@
 {
   "name": "baryshok-react-native-material-kit",
-  "version": "0.3.6",
+  "version": "0.4.0",
   "description": "Bringing Material Design to React Native",
   "main": "lib/index.js",
   "author": "Yingxin Wu <yingxinwu.g@gmail.com>",
@@ -36,7 +36,7 @@
     "gulp-docco": "0.0.4"
   },
   "dependencies": {
-    "ramda": "~0.21.0"
+    "ramda": "^0.23.0"
   },
   "scripts": {
     "lint": "eslint lib"
