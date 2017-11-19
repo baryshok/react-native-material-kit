@@ -4,12 +4,15 @@
 [![bitHound Score][bithound-badge]][bithound]
 [![Gitter][gitter-badge]][gitter-rnmk]
 
+<a href="https://www.jetbrains.com/" title="Built with JetBrains IDEs">
+  <img src="http://www.xinthink.com/react-native-material-kit/images/logo_JetBrains_1.svg" alt="Built with JetBrains IDEs" width="64">
+</a>
 
 A set of UI components, in the purpose of introducing [Material Design][md] to apps built with [React Native][rn], quickly and painlessly.
 
 [npm-badge]: https://img.shields.io/npm/v/react-native-material-kit.svg
 [npm]: https://www.npmjs.com/package/react-native-material-kit
-[rn-badge]: https://img.shields.io/badge/react--native-v0.35-05A5D1.svg
+[rn-badge]: https://img.shields.io/badge/react--native-v0.39-05A5D1.svg
 [rn]: https://facebook.github.io/react-native
 [md]: http://www.google.com/design/spec/material-design/introduction.html
 [license-badge]: https://img.shields.io/dub/l/vibe-d.svg
@@ -22,6 +25,7 @@ A set of UI components, in the purpose of introducing [Material Design][md] to a
 ## Getting Started
 
 First, `cd` to your RN project directory, and install RNMK through [rnpm](https://github.com/rnpm/rnpm) . If you don't have rnpm, you can install RNMK from npm with the command `npm i -S react-native-material-kit` and link it manually (see below).
+
 
 ## NOTICE:
 
@@ -36,9 +40,9 @@ react-native-material-kit < 0.4.0 only supports react-native < 0.40.0
   `rnpm install react-native-material-kit`
 
 * ####React Native >= 0.29
-  `$npm install -S react-native-material-kit`
+  `npm install -S react-native-material-kit`
 
-  `$react-native link react-native-material-kit`
+  `react-native link react-native-material-kit`
 
 
 
@@ -72,9 +76,9 @@ Now run `pod install`. This will create an Xcode workspace containing all necess
   `rnpm install react-native-material-kit`
 
 * ####React Native >= 0.29
-  `$npm install -S react-native-material-kit`
+  `npm install -S react-native-material-kit`
 
-  `$react-native link react-native-material-kit`
+  `react-native link react-native-material-kit`
 
 #### Manually
 1. JDK 7+ is required
@@ -103,6 +107,10 @@ Now run `pod install`. This will create an Xcode workspace containing all necess
       );
   }
   ```
+  
+#### Manual Installation Issues
+If you experience any trouble manually installing `react-native-material-kit` on Android,
+you should be able to safely skip it.
 
 Finally, you're good to go, feel free to require `react-native-material-kit` in your JS files.
 
@@ -286,7 +294,7 @@ const SliderWithValue = mdl.Slider.slider()
   .build();
 …
 <SliderWithValue
-  ref=“sliderWithValue”
+  ref="sliderWithValue"
   onChange={(curValue) => this.setState({curValue})}
 />
 ```
@@ -308,7 +316,7 @@ const SliderWithRange = mdl.RangeSlider.slider()
   .build();
 …
 <SliderWithRange
-  ref=“sliderWithRange”
+  ref="sliderWithRange"
   onChange={(curValue) => this.setState({
     min: curValue.min,
     max: curValue.max,
@@ -351,7 +359,7 @@ Customizing textfields through builder:
 
 ```jsx
 const CustomTextfield = mdl.Textfield.textfield()
-  .withPlaceholder(‘Text…’)
+  .withPlaceholder("Text...")
   .withStyle(styles.textfield)
   .withTintColor(MKColor.Lime)
   .withTextInputStyle({color: MKColor.Orange})
